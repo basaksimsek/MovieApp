@@ -1,0 +1,13 @@
+<div class="bg-purple-700 p-4 text-white flex justify-between items-center">
+  <div class="flex items-center">
+    <i class="fas fa-film text-white text-3xl mr-2"></i>
+    <h1 class="text-3xl font-bold tracking-wider">FAVMOVIES</h1>
+  </div>
+  <div>
+    
+    <span *ngIf="username" class="mr-4">Welcome, {{ username }}!</span>
+    <button (click)="logout()" class="bg-gray-600 hover:bg-gray-300 text-white font-bold py-2 px-4 rounded">
+      Logout
+    </button>
+  </div>
+</div>

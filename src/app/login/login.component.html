@@ -1,0 +1,37 @@
+<div class="login-container flex items-center justify-center h-screen bg-gray-100">
+    <div class="bg-white p-6 rounded-lg shadow-md w-96">
+      <h2 class="text-2xl font-bold  mb-6 text-center">FAVMOVIES</h2>
+      <form (ngSubmit)="login()" #loginForm="ngForm">
+        <div class="mb-4">
+          <label for="username" class="block text-sm font-medium text-gray-700">Username:</label>
+          <input
+            id="username"
+            type="text"
+            class="mt-1 block w-full p-2 border border-gray-300 rounded"
+            required
+            [(ngModel)]="username"
+            name="username"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="password" class="block text-sm font-medium text-gray-700">Password:</label>
+          <input
+            id="password"
+            type="password"
+            class="mt-1 block w-full p-2 border border-gray-300 rounded"
+            required
+            [(ngModel)]="password"
+            name="password"
+          />
+        </div>
+        <div *ngIf="errorMessage" class="text-red-500 mb-4">{{ errorMessage }}</div>
+        <button
+          type="submit"
+          class="w-full bg-purple-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+  
